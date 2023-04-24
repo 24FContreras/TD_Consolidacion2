@@ -22,6 +22,9 @@ function obtenerDigimon(digimon) {
       digimonImg.alt = data.name;
       mainDigiName.textContent = data.name;
       mainDigiLevel.textContent = data.level;
+    })
+    .catch(function () {
+      alert("Este digimon no se encuentra registrado");
     });
 }
 
@@ -36,6 +39,9 @@ function obtenerOpciones() {
       });
 
       digimonOptions.innerHTML = fragmento;
+    })
+    .catch(function () {
+      alert("hubo un error!");
     });
 }
 
@@ -66,6 +72,9 @@ function obtenerFeaturedDigimons() {
       }
 
       featuredGrid.innerHTML = fragmento;
+    })
+    .catch(function () {
+      alert("hubo un error!");
     });
 }
 
@@ -76,7 +85,6 @@ searchForm.addEventListener("submit", function (e) {
 });
 
 //NAV
-
 const navLinks = document.querySelector(".nav-links");
 const burger = document.querySelector("#burger");
 
