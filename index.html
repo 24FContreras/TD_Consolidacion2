@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej. de consolidación N°2 - Digimon App</title>
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- FONT AWESOME KIT -->
+    <script
+      src="https://kit.fontawesome.com/1872a23027.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="navbar-head">
+        <div class="brand">
+          <img src="assets/img/Digimon_Logo.png" alt="Digimon Logo" />
+        </div>
+        <button id="burger"><i class="fa-solid fa-bars"></i></button>
+      </div>
+
+      <div class="nav-links open" id="navLinks">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#featured">Destacados</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="seek">
+        <div>
+          <h1>Bienvenido al <span class="text-highlight">Digimundo</span></h1>
+
+          <form id="searchForm">
+            <label for="digimonInput"> Busca tu compañero digimon:</label>
+            <div class="input-group">
+              <input
+                type="text"
+                name="digimonInput"
+                id="digimonInput"
+                placeholder="ex: Koromon"
+                list="digimonOptions"
+              />
+              <datalist id="digimonOptions"></datalist>
+              <button type="submit">Buscar</button>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <article class="digicard">
+            <img src="" alt="" class="digimon-img" id="mainCard" />
+
+            <div class="name-bar">
+              <p id="mainDigiLevel"></p>
+              <p id="mainDigiName"></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="featured">
+        <div class="featured-header">
+          <button
+            class="refresh-btn"
+            onclick="obtenerFeaturedDigimons()"
+            aria-label="Cambiar digimons"
+          >
+            <i class="fa-solid fa-rotate" aria-hidden="tr"></i>
+          </button>
+          <h2>Digimons <span class="text-highlight">destacados</span></h2>
+        </div>
+
+        <div class="featured-grid" id="featuredGrid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>digi<span class="text-highlight footer-app">APP</span></p>
+      <p>
+        Alimentado por
+        <a
+          href="https://digimon-api.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Digimon API
+        </a>
+      </p>
+    </footer>
+    <!-- SCRIPTS -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
